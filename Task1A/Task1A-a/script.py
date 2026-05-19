@@ -33,117 +33,96 @@ def analyze_arena(input_image):
     # WRITE YOUR LOGIC BELOW
     # ==========================================
 
-    _HSV_RANGES = {
-        "DANGER":  [(np.array([0,  150, 100]), np.array([10,  255, 255])),
-                    (np.array([170,150, 100]), np.array([180, 255, 255]))],
-        "SAFE":    [(np.array([40, 100, 100]), np.array([80,  255, 255]))],
-        "REFUEL":  [(np.array([100,150, 100]), np.array([130, 255, 255]))],
-        "SLOW":    [(np.array([10, 150, 100]), np.array([25,  255, 255]))],
-    }
-    
-    _HSV_YELLOW = (np.array([20,  150, 150]), np.array([35,  255, 255]))
-    _HSV_CYAN   = (np.array([85,  150, 150]), np.array([100, 255, 255]))
-    
-    _SOLID_MIN_PIXELS  = 200
-    _TEXT_MIN_PIXELS   = 15
-
-    def _find_grid_bounds(gray):
-        h, w = gray.shape
-        threshold = 100
-        x_start, x_end, y_start, y_end = 0, w - 1, 0, h - 1
-        
-        for x in range(w):
-            if gray[:, x].max() > threshold:
-                x_start = x
-                break
-        for x in range(w - 1, -1, -1):
-            if gray[:, x].max() > threshold:
-                x_end = x
-                break
-        for y in range(h):
-            if gray[y, :].max() > threshold:
-                y_start = y
-                break
-        for y in range(h - 1, -1, -1):
-            if gray[y, :].max() > threshold:
-                y_end = y
-                break
-        return x_start, y_start, x_end, y_end
-
-    def _detect_n(gray, x_start, y_start, x_end, y_end):
-        ALLOWED = {6, 8, 10, 12}
-        mid_x = (x_start + x_end) // 2
-        col_strip = gray[y_start : y_end + 1, mid_x].astype(np.float32)
-        col_smooth = cv2.GaussianBlur(col_strip.reshape(-1, 1), (1, 7), 0).flatten()
-        binary = (col_smooth > 128).astype(np.int8)
-        transitions = int(np.sum(np.abs(np.diff(binary))))
-        n_raw = (transitions - 2) + 1  
-        
-        if n_raw in ALLOWED:
-            return n_raw
-        return min(ALLOWED, key=lambda v: abs(v - n_raw))
-
-    def _count_hsv_mask(roi_hsv, lower, upper):
-        return int(np.count_nonzero(cv2.inRange(roi_hsv, lower, upper)))
-
-    def _classify_solid_color(roi_hsv):
-        scores = {}
-        for label, ranges in _HSV_RANGES.items():
-            cnt = sum(_count_hsv_mask(roi_hsv, lo, hi) for lo, hi in ranges)
-            scores[label] = cnt
-        best_label = max(scores, key=scores.get)
-        if scores[best_label] >= _SOLID_MIN_PIXELS:
-            return best_label
-        return None
-
-    def _has_text_color(roi_hsv, lower, upper):
-        return _count_hsv_mask(roi_hsv, lower, upper) >= _TEXT_MIN_PIXELS
-
-    def _cell_label(i, j, N):
-        return chr(65 + j) + str(N - i)
-
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    hsv  = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
-
-    x_start, y_start, x_end, y_end = _find_grid_bounds(gray)
+    _, thresh = cv2.threshold(gray, 50, 255, cv2.THRESH_BINARY)
+    contours, _ = cv2.findContours(thresh, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
     
-    if x_end - x_start >= 50 and y_end - y_start >= 50:
-        
-        N = _detect_n(gray, x_start, y_start, x_end, y_end)
-        result["arena_size"] = int(N)
-        
-        grid_width  = x_end - x_start
-        grid_height = y_end - y_start
-        cell_w = grid_width  / N
-        cell_h = grid_height / N
+    h_img, w_img = image.shape[:2]
+    img_area = h_img * w_img
+    max_area = 0
+    best_rect = (0, 0, w_img, h_img) 
+    
+    for cnt in contours:
+        x, y, w, h = cv2.boundingRect(cnt)
+        area = w * h
 
-        solid_half = max(7, int(min(cell_w, cell_h) * 0.40 / 2))
-        text_half  = max(7, int(min(cell_w, cell_h) * 0.30 / 2))
+        if area > max_area and area > 0.05 * img_area:
+            if 0.8 < w / h < 1.2:
 
-        for i in range(N):
-            for j in range(N):
-                cy = int(y_start + i * cell_h + cell_h / 2)
-                cx = int(x_start + j * cell_w + cell_w / 2)
-
-                cy = int(np.clip(cy, solid_half, gray.shape[0] - solid_half - 1))
-                cx = int(np.clip(cx, solid_half, gray.shape[1] - solid_half - 1))
-
-                roi_hsv_solid = hsv[cy - solid_half : cy + solid_half + 1, cx - solid_half : cx + solid_half + 1]
-                roi_hsv_text  = hsv[cy - text_half : cy + text_half + 1, cx - text_half : cx + text_half + 1]
-
-                cell_str = _cell_label(i, j, N)
-
-                env_keyword = _classify_solid_color(roi_hsv_solid)
-                if env_keyword is not None:
-                    result["special_cells"][cell_str] = env_keyword
-                    continue  
-
-                if _has_text_color(roi_hsv_text, *_HSV_YELLOW):
-                    result["start"] = cell_str
+                if w > 0.98 * w_img and h > 0.98 * h_img:
                     continue
-
-                if _has_text_color(roi_hsv_text, *_HSV_CYAN):
-                    result["goal"] = cell_str
+                max_area = area
+                best_rect = (x, y, w, h)
+                
+    x, y, w, h = best_rect
+    roi = image[y:y+h, x:x+w]
+    hsv_roi = cv2.cvtColor(roi, cv2.COLOR_BGR2HSV)
+    
+    edges = cv2.Canny(roi, 50, 150)
+    cnts_roi, _ = cv2.findContours(edges, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+    widths = []
+    
+    for c in cnts_roi:
+        _, _, cw, ch = cv2.boundingRect(c)
+        if (w / 13) < cw < (w / 4) and (h / 13) < ch < (h / 4):
+            widths.append(cw)
+            
+    if widths:
+        median_w = np.median(widths)
+        n_est = w / median_w
+        valid_Ns = [6, 8, 10, 12]
+        arena_size = min(valid_Ns, key=lambda val: abs(val - n_est))
+    else:
+        arena_size = 10 
+        
+    result["arena_size"] = arena_size
+    
+    cell_w = w / arena_size
+    cell_h = h / arena_size
+    
+    for r in range(arena_size):
+        for c in range(arena_size):
+            x1 = int(c * cell_w)
+            y1 = int(r * cell_h)
+            x2 = int((c + 1) * cell_w)
+            y2 = int((r + 1) * cell_h)
+            
+            margin_x = int((x2 - x1) * 0.2)
+            margin_y = int((y2 - y1) * 0.2)
+            
+            cell_hsv = hsv_roi[y1+margin_y:y2-margin_y, x1+margin_x:x2-margin_x]
+            
+            masks = {
+                "DANGER": (
+                    cv2.inRange(cell_hsv, np.array([0, 70, 70]), np.array([10, 255, 255])) |
+                    cv2.inRange(cell_hsv, np.array([160, 70, 70]), np.array([180, 255, 255]))
+                ),
+                "SAFE": cv2.inRange(cell_hsv, np.array([40, 70, 70]), np.array([80, 255, 255])),
+                "REFUEL": cv2.inRange(cell_hsv, np.array([100, 70, 70]), np.array([140, 255, 255])),
+                "SLOW": cv2.inRange(cell_hsv, np.array([11, 70, 70]), np.array([24, 255, 255])),
+                "START": cv2.inRange(cell_hsv, np.array([25, 70, 70]), np.array([39, 255, 255])),
+                "GOAL": cv2.inRange(cell_hsv, np.array([85, 70, 70]), np.array([105, 255, 255]))
+            }
+            
+            pixel_threshold = max(5, int((cell_w * cell_h) * 0.01))
+            
+            cell_type = None
+            for name, mask in masks.items():
+                if np.count_nonzero(mask) > pixel_threshold:
+                    cell_type = name
+                    break
+                    
+            if cell_type:
+                col_letter = chr(65 + c)
+                row_number = str(arena_size - r)
+                coord = f"{col_letter}{row_number}"
+                
+                if cell_type == "START":
+                    result["start"] = coord
+                elif cell_type == "GOAL":
+                    result["goal"] = coord
+                else:
+                    result["special_cells"][coord] = cell_type
 
     # ==========================================
     # SORT SPECIAL CELLS
