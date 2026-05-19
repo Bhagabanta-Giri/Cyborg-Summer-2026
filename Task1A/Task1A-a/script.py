@@ -40,7 +40,7 @@ def analyze_arena(input_image):
     h_img, w_img = image.shape[:2]
     img_area = h_img * w_img
     max_area = 0
-    best_rect = (0, 0, w_img, h_img) 
+    grid_exact = (0, 0, w_img, h_img) 
     
     for cnt in contours:
         x, y, w, h = cv2.boundingRect(cnt)
@@ -52,9 +52,9 @@ def analyze_arena(input_image):
                 if w > 0.98 * w_img and h > 0.98 * h_img:
                     continue
                 max_area = area
-                best_rect = (x, y, w, h)
+                grid_exact = (x, y, w, h)
                 
-    x, y, w, h = best_rect
+    x, y, w, h =  grid_exact
     roi = image[y:y+h, x:x+w]
     hsv_roi = cv2.cvtColor(roi, cv2.COLOR_BGR2HSV)
     

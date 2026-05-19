@@ -18,7 +18,7 @@ BASE_DIR = os.path.dirname(
 video_path = os.path.join(
     BASE_DIR,
     "Test_videos",
-    "arena_video_7.mp4" #flag arena7 (top=2?)
+    "arena_video_7.mp4" 
 )
 
 # ==========================================
