@@ -1,0 +1,251 @@
+[0.019s] Invoking command in '/home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/build/task3': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/lenovoi/Sandbox/ROSIItuto/ros2_sbws/install/py_pubsub:/home/lenovoi/Sandbox/ROSIItuto/ros2_sbws/install/sb_py_robo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/src/task3 -DCMAKE_INSTALL_PREFIX=/home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3
+[0.129s] -- The C compiler identification is GNU 13.3.0
+[0.243s] -- The CXX compiler identification is GNU 13.3.0
+[0.278s] -- Detecting C compiler ABI info
+[0.538s] -- Detecting C compiler ABI info - done
+[0.553s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.554s] -- Detecting C compile features
+[0.554s] -- Detecting C compile features - done
+[0.574s] -- Detecting CXX compiler ABI info
+[0.785s] -- Detecting CXX compiler ABI info - done
+[0.799s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.800s] -- Detecting CXX compile features
+[0.801s] -- Detecting CXX compile features - done
+[0.806s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.090s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.284s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[1.293s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.355s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.394s] -- Found rosidl_adapter: 4.6.7 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[1.966s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[2.375s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.905s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.907s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[3.034s] -- Found PythonExtra: /usr/bin/python3  
+[3.438s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[3.491s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[3.498s] -- Configuring done (3.5s)
+[3.529s] -- Generating done (0.0s)
+[3.539s] -- Build files have been written to: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/build/task3
+[3.549s] Invoked command in '/home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/build/task3' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/lenovoi/Sandbox/ROSIItuto/ros2_sbws/install/py_pubsub:/home/lenovoi/Sandbox/ROSIItuto/ros2_sbws/install/sb_py_robo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/src/task3 -DCMAKE_INSTALL_PREFIX=/home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3
+[3.550s] Invoking command in '/home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/build/task3': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/lenovoi/Sandbox/ROSIItuto/ros2_sbws/install/py_pubsub:/home/lenovoi/Sandbox/ROSIItuto/ros2_sbws/install/sb_py_robo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/build/task3 -- -j16 -l16
+[3.600s] [  2%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[3.600s] [  5%] [34m[1mGenerating Rust code for ROS interfaces[0m
+[3.609s] [  5%] Built target ament_cmake_python_copy_task3
+[3.769s] [  5%] Built target task3__rosidl_generator_type_description
+[3.780s] [  8%] [34m[1mGenerating C code for ROS interfaces[0m
+[3.790s] [ 11%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[3.795s] [ 11%] Built target task3__rs
+[3.817s] running egg_info
+[3.817s] creating task3.egg-info
+[3.836s] writing task3.egg-info/PKG-INFO
+[3.836s] writing dependency_links to task3.egg-info/dependency_links.txt
+[3.836s] writing top-level names to task3.egg-info/top_level.txt
+[3.836s] writing manifest file 'task3.egg-info/SOURCES.txt'
+[3.890s] reading manifest file 'task3.egg-info/SOURCES.txt'
+[3.890s] writing manifest file 'task3.egg-info/SOURCES.txt'
+[3.915s] [ 11%] Built target ament_cmake_python_build_task3_egg
+[4.008s] [ 11%] Built target task3__cpp
+[4.025s] [ 17%] [32mBuilding C object CMakeFiles/task3__rosidl_generator_c.dir/rosidl_generator_c/task3/srv/detail/prime_factors__description.c.o[0m
+[4.025s] [ 17%] [32mBuilding C object CMakeFiles/task3__rosidl_generator_c.dir/rosidl_generator_c/task3/srv/detail/prime_factors__functions.c.o[0m
+[4.025s] [ 20%] [32mBuilding C object CMakeFiles/task3__rosidl_generator_c.dir/rosidl_generator_c/task3/srv/detail/prime_factors__type_support.c.o[0m
+[4.143s] [ 22%] [32m[1mLinking C shared library libtask3__rosidl_generator_c.so[0m
+[4.182s] [ 22%] Built target task3__rosidl_generator_c
+[4.193s] [ 40%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[4.193s] [ 40%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[4.193s] [ 40%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[4.194s] [ 40%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[4.194s] [ 40%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[4.194s] [ 40%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[4.408s] [ 45%] [32mBuilding CXX object CMakeFiles/task3__rosidl_typesupport_c.dir/rosidl_typesupport_c/task3/srv/prime_factors__type_support.cpp.o[0m
+[4.408s] [ 45%] [32mBuilding CXX object CMakeFiles/task3__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/task3/srv/prime_factors__type_support.cpp.o[0m
+[4.438s] [ 51%] [32mBuilding C object CMakeFiles/task3__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/task3/srv/detail/prime_factors__type_support.c.o[0m
+[4.438s] [ 51%] [32mBuilding CXX object CMakeFiles/task3__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/task3/srv/detail/prime_factors__type_support.cpp.o[0m
+[4.452s] [ 54%] [32m[1mLinking CXX shared library libtask3__rosidl_typesupport_c.so[0m
+[4.461s] [ 57%] [32mBuilding CXX object CMakeFiles/task3__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/task3/srv/detail/dds_fastrtps/prime_factors__type_support.cpp.o[0m
+[4.473s] [ 60%] [32mBuilding CXX object CMakeFiles/task3__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/task3/srv/detail/prime_factors__type_support_c.cpp.o[0m
+[4.483s] [ 62%] [32m[1mLinking C shared library libtask3__rosidl_typesupport_introspection_c.so[0m
+[4.492s] [ 62%] Built target task3__rosidl_typesupport_c
+[4.518s] [ 62%] Built target task3__rosidl_typesupport_introspection_c
+[4.771s] [ 65%] [32m[1mLinking CXX shared library libtask3__rosidl_typesupport_cpp.so[0m
+[4.787s] [ 68%] [32m[1mLinking CXX shared library libtask3__rosidl_typesupport_introspection_cpp.so[0m
+[4.862s] [ 68%] Built target task3__rosidl_typesupport_cpp
+[4.876s] [ 68%] Built target task3__rosidl_typesupport_introspection_cpp
+[4.901s] [ 71%] [32m[1mLinking CXX shared library libtask3__rosidl_typesupport_fastrtps_c.so[0m
+[4.953s] [ 71%] Built target task3__rosidl_typesupport_fastrtps_c
+[5.057s] [ 74%] [32m[1mLinking CXX shared library libtask3__rosidl_typesupport_fastrtps_cpp.so[0m
+[5.125s] [ 74%] Built target task3__rosidl_typesupport_fastrtps_cpp
+[5.148s] [ 74%] Built target task3
+[5.169s] [ 77%] [34m[1mGenerating Python code for ROS interfaces[0m
+[5.440s] [ 77%] Built target task3__py
+[5.462s] [ 80%] [32mBuilding C object CMakeFiles/task3__rosidl_generator_py.dir/rosidl_generator_py/task3/srv/_prime_factors_s.c.o[0m
+[5.578s] [ 82%] [32m[1mLinking C shared library libtask3__rosidl_generator_py.so[0m
+[5.622s] [ 82%] Built target task3__rosidl_generator_py
+[5.645s] [ 91%] [32mBuilding C object CMakeFiles/task3_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/task3/_task3_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[5.645s] [ 91%] [32mBuilding C object CMakeFiles/task3_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/task3/_task3_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[5.645s] [ 91%] [32mBuilding C object CMakeFiles/task3_s__rosidl_typesupport_c.dir/rosidl_generator_py/task3/_task3_s.ep.rosidl_typesupport_c.c.o[0m
+[5.734s] [ 97%] [32m[1mLinking C shared module rosidl_generator_py/task3/task3_s__rosidl_typesupport_introspection_c.so[0m
+[5.734s] [ 97%] [32m[1mLinking C shared module rosidl_generator_py/task3/task3_s__rosidl_typesupport_c.so[0m
+[5.735s] [100%] [32m[1mLinking C shared module rosidl_generator_py/task3/task3_s__rosidl_typesupport_fastrtps_c.so[0m
+[5.765s] [100%] Built target task3_s__rosidl_typesupport_fastrtps_c
+[5.765s] [100%] Built target task3_s__rosidl_typesupport_c
+[5.766s] [100%] Built target task3_s__rosidl_typesupport_introspection_c
+[5.804s] Invoked command in '/home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/build/task3' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/lenovoi/Sandbox/ROSIItuto/ros2_sbws/install/py_pubsub:/home/lenovoi/Sandbox/ROSIItuto/ros2_sbws/install/sb_py_robo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/build/task3 -- -j16 -l16
+[5.815s] Invoking command in '/home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/build/task3': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/lenovoi/Sandbox/ROSIItuto/ros2_sbws/install/py_pubsub:/home/lenovoi/Sandbox/ROSIItuto/ros2_sbws/install/sb_py_robo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/build/task3
+[5.822s] -- Install configuration: ""
+[5.822s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/ament_index/resource_index/rosidl_interfaces/task3
+[5.823s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/srv/PrimeFactors.json
+[5.823s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3
+[5.823s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv
+[5.823s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv/prime_factors.h
+[5.823s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv/detail
+[5.823s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__struct.h
+[5.824s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__functions.c
+[5.824s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__type_support.h
+[5.824s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__description.c
+[5.824s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__functions.h
+[5.824s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__type_support.c
+[5.824s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/msg
+[5.824s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/msg/rosidl_generator_c__visibility_control.h
+[5.824s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/environment/library_path.sh
+[5.824s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/environment/library_path.dsv
+[5.825s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/libtask3__rosidl_generator_c.so
+[5.825s] -- Set non-toolchain portion of runtime path of "/home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/libtask3__rosidl_generator_c.so" to ""
+[5.825s] -- Up-to-date: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3
+[5.825s] -- Up-to-date: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv
+[5.825s] -- Up-to-date: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv/detail
+[5.825s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__rosidl_typesupport_fastrtps_c.h
+[5.825s] -- Up-to-date: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/msg
+[5.825s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[5.825s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/libtask3__rosidl_typesupport_fastrtps_c.so
+[5.826s] -- Set non-toolchain portion of runtime path of "/home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/libtask3__rosidl_typesupport_fastrtps_c.so" to ""
+[5.826s] -- Up-to-date: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3
+[5.826s] -- Up-to-date: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv
+[5.826s] -- Up-to-date: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv/detail
+[5.826s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__rosidl_typesupport_introspection_c.h
+[5.826s] -- Up-to-date: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__type_support.c
+[5.826s] -- Up-to-date: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/msg
+[5.826s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[5.826s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/libtask3__rosidl_typesupport_introspection_c.so
+[5.827s] -- Set non-toolchain portion of runtime path of "/home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/libtask3__rosidl_typesupport_introspection_c.so" to ""
+[5.827s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/libtask3__rosidl_typesupport_c.so
+[5.827s] -- Set non-toolchain portion of runtime path of "/home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/libtask3__rosidl_typesupport_c.so" to ""
+[5.827s] -- Up-to-date: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3
+[5.827s] -- Up-to-date: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv
+[5.827s] -- Up-to-date: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv/detail
+[5.827s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__builder.hpp
+[5.827s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__traits.hpp
+[5.827s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__type_support.hpp
+[5.828s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__struct.hpp
+[5.828s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv/prime_factors.hpp
+[5.828s] -- Up-to-date: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/msg
+[5.828s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/msg/rosidl_generator_cpp__visibility_control.hpp
+[5.828s] -- Up-to-date: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3
+[5.828s] -- Up-to-date: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv
+[5.828s] -- Up-to-date: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv/detail
+[5.828s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__rosidl_typesupport_fastrtps_cpp.hpp
+[5.828s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv/detail/dds_fastrtps
+[5.828s] -- Up-to-date: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/msg
+[5.828s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[5.829s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/libtask3__rosidl_typesupport_fastrtps_cpp.so
+[5.829s] -- Set non-toolchain portion of runtime path of "/home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/libtask3__rosidl_typesupport_fastrtps_cpp.so" to ""
+[5.829s] -- Up-to-date: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3
+[5.829s] -- Up-to-date: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv
+[5.829s] -- Up-to-date: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv/detail
+[5.829s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__type_support.cpp
+[5.829s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/include/task3/task3/srv/detail/prime_factors__rosidl_typesupport_introspection_cpp.hpp
+[5.829s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/libtask3__rosidl_typesupport_introspection_cpp.so
+[5.830s] -- Set non-toolchain portion of runtime path of "/home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/libtask3__rosidl_typesupport_introspection_cpp.so" to ""
+[5.830s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/libtask3__rosidl_typesupport_cpp.so
+[5.830s] -- Set non-toolchain portion of runtime path of "/home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/libtask3__rosidl_typesupport_cpp.so" to ""
+[5.830s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/environment/pythonpath.sh
+[5.831s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/environment/pythonpath.dsv
+[5.831s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/python3.12/site-packages/task3-0.0.0-py3.12.egg-info
+[5.831s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/python3.12/site-packages/task3-0.0.0-py3.12.egg-info/PKG-INFO
+[5.831s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/python3.12/site-packages/task3-0.0.0-py3.12.egg-info/SOURCES.txt
+[5.831s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/python3.12/site-packages/task3-0.0.0-py3.12.egg-info/top_level.txt
+[5.831s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/python3.12/site-packages/task3-0.0.0-py3.12.egg-info/dependency_links.txt
+[5.831s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/python3.12/site-packages/task3
+[5.832s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/python3.12/site-packages/task3/srv
+[5.832s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/python3.12/site-packages/task3/srv/_prime_factors.py
+[5.832s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/python3.12/site-packages/task3/srv/_prime_factors_s.c
+[5.832s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/python3.12/site-packages/task3/srv/__init__.py
+[5.832s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/python3.12/site-packages/task3/task3_s__rosidl_typesupport_fastrtps_c.so
+[5.832s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/python3.12/site-packages/task3/__init__.py
+[5.832s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/python3.12/site-packages/task3/task3_s__rosidl_typesupport_introspection_c.so
+[5.832s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/python3.12/site-packages/task3/_task3_s.ep.rosidl_typesupport_fastrtps_c.c
+[5.832s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/python3.12/site-packages/task3/_task3_s.ep.rosidl_typesupport_introspection_c.c
+[5.832s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/python3.12/site-packages/task3/task3_s__rosidl_typesupport_c.so
+[5.833s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/python3.12/site-packages/task3/_task3_s.ep.rosidl_typesupport_c.c
+[5.868s] Listing '/home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/python3.12/site-packages/task3'...
+[5.868s] Compiling '/home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/python3.12/site-packages/task3/__init__.py'...
+[5.868s] Listing '/home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/python3.12/site-packages/task3/srv'...
+[5.868s] Compiling '/home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/python3.12/site-packages/task3/srv/__init__.py'...
+[5.868s] Compiling '/home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/python3.12/site-packages/task3/srv/_prime_factors.py'...
+[5.873s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/python3.12/site-packages/task3/task3_s__rosidl_typesupport_fastrtps_c.so
+[5.873s] -- Set non-toolchain portion of runtime path of "/home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/python3.12/site-packages/task3/task3_s__rosidl_typesupport_fastrtps_c.so" to ""
+[5.874s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/python3.12/site-packages/task3/task3_s__rosidl_typesupport_introspection_c.so
+[5.874s] -- Set non-toolchain portion of runtime path of "/home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/python3.12/site-packages/task3/task3_s__rosidl_typesupport_introspection_c.so" to ""
+[5.874s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/python3.12/site-packages/task3/task3_s__rosidl_typesupport_c.so
+[5.874s] -- Set non-toolchain portion of runtime path of "/home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/python3.12/site-packages/task3/task3_s__rosidl_typesupport_c.so" to ""
+[5.874s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/libtask3__rosidl_generator_py.so
+[5.874s] -- Set non-toolchain portion of runtime path of "/home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/libtask3__rosidl_generator_py.so" to ""
+[5.875s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/ament_index/resource_index/rust_packages/task3
+[5.875s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/rust
+[5.875s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/rust/src
+[5.875s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/rust/src/srv
+[5.875s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/rust/src/srv/rmw.rs
+[5.875s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/rust/src/srv.rs
+[5.875s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/rust/src/lib.rs
+[5.875s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/rust/Cargo.toml
+[5.875s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/rust/build.rs
+[5.875s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/srv/PrimeFactors.idl
+[5.876s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/srv/PrimeFactors.srv
+[5.876s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/launch
+[5.876s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/launch/Task3.launch.py
+[5.876s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/task3/Task3A.py
+[5.876s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/task3/BonusTask3A.py
+[5.876s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/task3/Task3B.py
+[5.876s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/task3/Task3C.py
+[5.876s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/task3/Task3D_server.py
+[5.877s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/lib/task3/Task3D_client.py
+[5.877s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/ament_index/resource_index/package_run_dependencies/task3
+[5.877s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/ament_index/resource_index/parent_prefix_path/task3
+[5.877s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/environment/ament_prefix_path.sh
+[5.877s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/environment/ament_prefix_path.dsv
+[5.877s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/environment/path.sh
+[5.878s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/environment/path.dsv
+[5.878s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/local_setup.bash
+[5.878s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/local_setup.sh
+[5.878s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/local_setup.zsh
+[5.878s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/local_setup.dsv
+[5.878s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/package.dsv
+[5.878s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/ament_index/resource_index/packages/task3
+[5.878s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/cmake/export_task3__rosidl_generator_cExport.cmake
+[5.879s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/cmake/export_task3__rosidl_generator_cExport-noconfig.cmake
+[5.879s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/cmake/export_task3__rosidl_typesupport_fastrtps_cExport.cmake
+[5.879s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/cmake/export_task3__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[5.879s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/cmake/task3__rosidl_typesupport_introspection_cExport.cmake
+[5.879s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/cmake/task3__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[5.879s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/cmake/task3__rosidl_typesupport_cExport.cmake
+[5.880s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/cmake/task3__rosidl_typesupport_cExport-noconfig.cmake
+[5.880s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/cmake/export_task3__rosidl_generator_cppExport.cmake
+[5.880s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/cmake/export_task3__rosidl_typesupport_fastrtps_cppExport.cmake
+[5.880s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/cmake/export_task3__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[5.880s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/cmake/task3__rosidl_typesupport_introspection_cppExport.cmake
+[5.880s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/cmake/task3__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[5.881s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/cmake/task3__rosidl_typesupport_cppExport.cmake
+[5.881s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/cmake/task3__rosidl_typesupport_cppExport-noconfig.cmake
+[5.881s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/cmake/export_task3__rosidl_generator_pyExport.cmake
+[5.881s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/cmake/export_task3__rosidl_generator_pyExport-noconfig.cmake
+[5.881s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/cmake/rosidl_cmake-extras.cmake
+[5.882s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.882s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/cmake/ament_cmake_export_include_directories-extras.cmake
+[5.882s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/cmake/ament_cmake_export_libraries-extras.cmake
+[5.882s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/cmake/ament_cmake_export_targets-extras.cmake
+[5.882s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[5.882s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[5.882s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/cmake/task3Config.cmake
+[5.883s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/cmake/task3Config-version.cmake
+[5.883s] -- Installing: /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/install/task3/share/task3/package.xml
+[5.886s] Invoked command in '/home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/build/task3' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/lenovoi/Sandbox/ROSIItuto/ros2_sbws/install/py_pubsub:/home/lenovoi/Sandbox/ROSIItuto/ros2_sbws/install/sb_py_robo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/lenovoi/Projects/Cyborg-Summer-Induction-2026/Cyborg-Summer-2026/Task3/build/task3
