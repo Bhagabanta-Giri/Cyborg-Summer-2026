@@ -193,10 +193,39 @@ class Task3C(Node):
         # Publish velocity commands
         # using self.police_pub
         #
-        # Do not modify thief logic.
+        # Do not modify thief logic. #Bhaiya, thief logic me distance variable ko access kahi nhi kia gya he, use dekh lo.
         #
+        police_cmd = Twist()
 
-        pass
+        position_error = math.hypot(
+            self.thief_pose.x - self.police_pose.x,
+            self.thief_pose.y - self.police_pose.y
+        )
+
+        heading_error = math.atan2(
+            self.thief_pose.y - self.police_pose.y,
+            self.thief_pose.x - self.police_pose.x
+        ) - self.police_pose.theta
+
+        while heading_error > math.pi:
+            heading_error -= 2 * math.pi
+
+        while heading_error < -math.pi:
+            heading_error += 2 * math.pi
+
+        if position_error > 0.5:
+            police_cmd.linear.x = min(position_error, 3.0)
+            police_cmd.angular.z = min(heading_error, 3.0)
+        elif position_error < 0.5:
+            police_cmd.linear.x = 0
+            police_cmd.angular.z = 0
+            self.get_logger().info(
+                "Caught the thief!"
+            )
+
+        self.police_pub.publish(
+            police_cmd
+        )
 
 
 def main(args=None):
