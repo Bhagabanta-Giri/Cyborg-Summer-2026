@@ -1,0 +1,68 @@
+digraph G {
+node [shape=box];
+"chassis" [label="chassis"];
+"arduino" [label="arduino"];
+"battery" [label="battery"];
+"caster_base" [label="caster_base"];
+"caster_stud" [label="caster_stud"];
+"dummy_link1" [label="dummy_link1"];
+"dummy_link2" [label="dummy_link2"];
+"caster_ball" [label="caster_ball"];
+"driver" [label="driver"];
+"ir1" [label="ir1"];
+"ir2" [label="ir2"];
+"ir3" [label="ir3"];
+"ir4" [label="ir4"];
+"irl" [label="irl"];
+"irr" [label="irr"];
+"motorl" [label="motorl"];
+"iwheell" [label="iwheell"];
+"wheell" [label="wheell"];
+"motorr" [label="motorr"];
+"iwheelr" [label="iwheelr"];
+"wheelr" [label="wheelr"];
+"switch" [label="switch"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"chassis" -> "arduino_joint" [label="xyz: 0 0.15 0.055 \nrpy: 0 -0 0"]
+"arduino_joint" -> "arduino"
+"chassis" -> "battery_joint" [label="xyz: -0.4 0 0.075 \nrpy: 0 -0 0"]
+"battery_joint" -> "battery"
+"chassis" -> "caster_joint" [label="xyz: 0.4 0 -0.055 \nrpy: 0 -0 0"]
+"caster_joint" -> "caster_base"
+"caster_base" -> "stud_joint" [label="xyz: 0 0 -0.065 \nrpy: 0 -0 0"]
+"stud_joint" -> "caster_stud"
+"caster_stud" -> "ball_n_socketx" [label="xyz: 0 0 -0.04 \nrpy: 0 -0 0"]
+"ball_n_socketx" -> "dummy_link1"
+"dummy_link1" -> "ball_n_sockety" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"ball_n_sockety" -> "dummy_link2"
+"dummy_link2" -> "ball_n_socketz" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"ball_n_socketz" -> "caster_ball"
+"chassis" -> "driver_joint" [label="xyz: 0 -0.15 0.055 \nrpy: 0 -0 0"]
+"driver_joint" -> "driver"
+"chassis" -> "ir1_joint" [label="xyz: 0.45 0.25 0.08 \nrpy: 0 -0 0"]
+"ir1_joint" -> "ir1"
+"chassis" -> "ir2_joint" [label="xyz: 0.45 0.1 0.08 \nrpy: 0 -0 0"]
+"ir2_joint" -> "ir2"
+"chassis" -> "ir3_joint" [label="xyz: 0.45 -0.1 0.08 \nrpy: 0 -0 0"]
+"ir3_joint" -> "ir3"
+"chassis" -> "ir4_joint" [label="xyz: 0.45 -0.25 0.08 \nrpy: 0 -0 0"]
+"ir4_joint" -> "ir4"
+"chassis" -> "irl_joint" [label="xyz: 0.3 0.25 0.08 \nrpy: 0 -0 0"]
+"irl_joint" -> "irl"
+"chassis" -> "irr_joint" [label="xyz: 0.3 -0.25 0.08 \nrpy: 0 -0 0"]
+"irr_joint" -> "irr"
+"chassis" -> "motorl_joint" [label="xyz: -0.3 0.225 -0.08 \nrpy: 0 -0 0"]
+"motorl_joint" -> "motorl"
+"motorl" -> "iwheell_joint" [label="xyz: 0 0.125 0 \nrpy: 1.5708 -0 0"]
+"iwheell_joint" -> "iwheell"
+"iwheell" -> "wheell_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"wheell_joint" -> "wheell"
+"chassis" -> "motorr_joint" [label="xyz: -0.3 -0.225 -0.08 \nrpy: 0 -0 0"]
+"motorr_joint" -> "motorr"
+"motorr" -> "iwheelr_joint" [label="xyz: 0 -0.125 0 \nrpy: 1.5708 -0 0"]
+"iwheelr_joint" -> "iwheelr"
+"iwheelr" -> "wheelr_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"wheelr_joint" -> "wheelr"
+"chassis" -> "switch_joint" [label="xyz: -0.4 0.25 0.04 \nrpy: 0 -0 0"]
+"switch_joint" -> "switch"
+}

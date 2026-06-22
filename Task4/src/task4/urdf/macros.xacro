@@ -1,0 +1,349 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+
+    <!-- Def Inertial -->
+    <xacro:macro name="default_inertial" params="mass">
+        <inertial>
+            <mass value="${mass}"/>
+
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+
+            <inertia
+                ixx="${mass*0.001}"
+                ixy="0"
+                ixz="0"
+                iyy="${mass*0.001}"
+                iyz="0"
+                izz="${mass*0.001}"/>
+        </inertial>
+    </xacro:macro>
+    <xacro:macro name="zero_inertial">
+        <inertial>
+            <mass value="0"/>
+
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+
+            <inertia
+                ixx="0"
+                ixy="0"
+                ixz="0"
+                iyy="0"
+                iyz="0"
+                izz="0"/>
+        </inertial>
+    </xacro:macro>
+
+
+    <!-- IR Module -->
+    <xacro:macro name="ir_module" params="name x y z">
+        <link name="${name}">
+            <xacro:default_inertial mass="${ir_mass}"/>
+            <visual>
+                <geometry>
+                    <box size="${ir_size} ${ir_size} ${ir_size}"/>
+                </geometry>
+                <material name="blue"/>
+            </visual>
+            <collision>
+                <geometry>
+                    <box size="${ir_size} ${ir_size} ${ir_size}"/>
+                </geometry>
+            </collision>
+        </link>
+
+        <joint name="${name}_joint" type="fixed">
+            <parent link="chassis"/>
+            <child link="${name}"/>
+            <origin xyz="${x} ${y} ${z}" rpy="0 0 0"/>
+        </joint>
+    </xacro:macro>
+
+    <!-- Drive Side -->
+    <xacro:macro name="drive_side" params="side motor_y wheel_y">
+
+        <link name="motor${side}">
+            <xacro:default_inertial mass="${motor_mass}"/>
+            <visual>
+                <geometry>
+                    <box size="${motor_l} ${motor_w} ${motor_h}"/>
+                </geometry>
+                <material name="blue"/>
+            </visual>
+            <collision>
+                <geometry>
+                    <box size="${motor_l} ${motor_w} ${motor_h}"/>
+                </geometry>
+            </collision>
+        </link>
+
+        <joint name="motor${side}_joint" type="fixed">
+            <parent link="chassis"/>
+            <child link="motor${side}"/>
+            <origin xyz="${motor_x} ${motor_y} ${motor_z}" rpy="0 0 0"/>
+        </joint>
+
+        <link name="iwheel${side}">
+            <xacro:default_inertial mass="${iwheel_mass}"/>
+            <visual>
+                <geometry>
+                    <cylinder radius="${iwheel_r}" length="${wheel_w}"/>
+                </geometry>
+                <material name="yellow"/>
+            </visual>
+            <collision>
+                <geometry>
+                    <cylinder radius="${iwheel_r}" length="${wheel_w}"/>
+                </geometry>
+            </collision>
+        </link>
+        <joint name="iwheel${side}_joint" type="continuous">
+            <parent link="motor${side}"/>
+            <child link="iwheel${side}"/>
+            <origin xyz="0 ${wheel_y} 0" rpy="${PI/2} 0 0"/>
+            <axis xyz="0 0 -1"/>
+        </joint>
+
+        <link name="wheel${side}">
+            <xacro:default_inertial mass="${wheel_mass}"/>
+            <visual>
+                <geometry>
+                    <cylinder radius="${wheel_r}" length="${wheel_w}"/>
+                </geometry>
+                <material name="black_2"/>
+            </visual>
+            <collision>
+                 <geometry>
+                    <cylinder radius="${wheel_r}" length="${wheel_w}"/>
+                </geometry>
+            </collision>
+        </link>
+
+        <joint name="wheel${side}_joint" type="fixed">
+            <parent link="iwheel${side}"/>
+            <child link="wheel${side}"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </joint>
+
+    </xacro:macro>
+
+    <!-- Caster -->
+    <xacro:macro name="caster_assembly">
+
+        <link name="caster_base">
+            <xacro:default_inertial mass="${caster_base_mass}"/>
+            <visual>
+                <geometry>
+                    <box size="${caster_base_size} ${caster_base_size} ${caster_base_h}"/>
+                </geometry>
+                <material name="red"/>
+            </visual>
+            <collision>
+                <geometry>
+                    <box size="${caster_base_size} ${caster_base_size} ${caster_base_h}"/>
+                </geometry>
+            </collision>
+        </link>
+
+        <joint name="caster_joint" type="fixed">
+            <parent link="chassis"/>
+            <child link="caster_base"/>
+            <origin xyz="0.4 0 -0.055" rpy="0 0 0"/>
+        </joint>
+
+        <link name="caster_stud">
+            <xacro:default_inertial mass="${caster_stud_mass}"/>
+            <visual>
+                <geometry>
+                    <cylinder radius="${caster_stud_r}" length="${caster_stud_h}"/>
+                </geometry>
+                <material name="red"/>
+            </visual>
+            <collision>
+                <geometry>
+                    <cylinder radius="${caster_stud_r}" length="${caster_stud_h}"/>
+                </geometry>
+            </collision>
+        </link>
+
+        <joint name="stud_joint" type="fixed">
+            <parent link="caster_base"/>
+            <child link="caster_stud"/>
+            <origin xyz="0 0 -0.065" rpy="0 0 0"/>
+        </joint>
+
+        <link name="dummy_link1">
+            <xacro:default_inertial mass="${caster_stud_mass}"/>
+            <collision >
+                <geometry>
+                    <sphere radius="0" />
+                </geometry>
+            </collision>
+        </link>
+        <link name="dummy_link2">
+            <xacro:default_inertial mass="${caster_stud_mass}"/>
+            <collision >
+                <geometry>
+                    <sphere radius="0" />
+                </geometry>
+            </collision>
+        </link>
+
+        <link name="caster_ball">
+            <xacro:default_inertial mass="${caster_ball_mass}"/>
+            <visual>
+                <geometry>
+                    <sphere radius="${caster_ball_r}"/>
+                </geometry>
+                <material name="black"/>
+            </visual>
+            <collision>
+                <geometry>
+                    <sphere radius="${caster_ball_r}"/>
+                </geometry>
+            </collision>
+        </link>
+
+        <joint name="ball_n_socketx" type="continuous">
+            <parent link="caster_stud" />
+            <child link="dummy_link1" />
+            <origin rpy="0 0 0" xyz="0 0 -0.04"/>
+            <axis xyz="1 0 0"/>
+        </joint>
+        
+        <joint name="ball_n_sockety" type="continuous">
+            <parent link="dummy_link1" />
+            <child link="dummy_link2" />
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <axis xyz="0 1 0"/>
+        </joint>
+        
+        
+        <joint name="ball_n_socketz" type="continuous">
+            <parent link="dummy_link2" />
+            <child link="caster_ball" />
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <axis xyz="0 0 1"/>
+        </joint>
+
+    </xacro:macro>
+
+    <!-- Controller -->
+    <xacro:macro name="controller_assembly" params="name mat y_offset z_offset">
+        <link name="${name}">
+            <xacro:default_inertial mass="${controller_mass}"/>
+            <visual>
+                <geometry>
+                    <box size="${controller_side} ${controller_side} ${controller_h}"/>
+                </geometry>
+                <material name="${mat}" />
+            </visual>
+            <collision>
+                <geometry>
+                    <box size="${controller_side} ${controller_side} ${controller_h}"/>
+                </geometry>
+            </collision>
+        </link>
+        <joint name="${name}_joint" type="fixed">
+            <parent link="chassis" />
+            <child link="${name}" />
+            <origin rpy="0 0 0" xyz="0 ${y_offset} ${z_offset}"/>
+        </joint>
+    </xacro:macro>
+
+    <!-- Battery and Switch -->
+    <xacro:macro name="battery">
+        <link name="battery">
+            <xacro:default_inertial mass="${battery_mass}"/>
+            <visual>
+                <geometry>
+                    <box size="${battery_l} ${battery_w} ${battery_h}"/>
+                </geometry>
+                <material name="black" />
+            </visual>
+            <collision>
+                <geometry>
+                    <box size="${battery_l} ${battery_w} ${battery_h}"/>
+                </geometry>
+            </collision>
+        </link>
+        <joint name="battery_joint" type="fixed">
+            <parent link="chassis" />
+            <child link="battery" />
+            <origin rpy="0 0 0" xyz="${battery_x} ${battery_y} ${battery_z}"/>
+        </joint>
+    </xacro:macro>
+
+    <xacro:macro name="switch">
+        <link name="switch">
+            <xacro:default_inertial mass="${switch_mass}"/>
+            <visual>
+                <geometry>
+                    <cylinder radius="${switch_r}" length="${switch_w}" />
+                </geometry>
+                <material name="black" />
+            </visual>
+            <collision>
+                <geometry>
+                    <cylinder radius="${switch_r}" length="${switch_w}" />
+                </geometry>
+            </collision>
+        </link>
+        <joint name="switch_joint" type="fixed">
+            <parent link="chassis" />
+            <child link="switch" />
+            <origin rpy="0 0 0" xyz="${switch_x} ${switch_y} ${switch_z}"/>
+        </joint>
+    </xacro:macro>
+
+    <!-- Wheel Assembly -->
+    <xacro:macro name="wheel_assembly">
+
+        <xacro:caster_assembly/>
+
+        <xacro:drive_side side="l" motor_y="0.225" wheel_y="0.125"/>
+
+        <xacro:drive_side side="r" motor_y="-0.225" wheel_y="-0.125"/>
+
+    </xacro:macro>
+
+    <!-- Main Assembly -->
+    <xacro:macro name="main_assembly">
+
+        <xacro:ir_module name="ir1" x="0.45" y="0.25" z="0.08"/>
+        <xacro:ir_module name="ir2" x="0.45" y="0.10" z="0.08"/>
+        <xacro:ir_module name="ir3" x="0.45" y="-0.10" z="0.08"/>
+        <xacro:ir_module name="ir4" x="0.45" y="-0.25" z="0.08"/>
+
+        <xacro:ir_module name="irl" x="0.30" y="0.25" z="0.08"/>
+        <xacro:ir_module name="irr" x="0.30" y="-0.25" z="0.08"/>
+
+        <xacro:controller_assembly name="arduino" mat="green" y_offset="0.15" z_offset="0.055"/>
+        <xacro:controller_assembly name="driver" mat="red" y_offset="-0.15" z_offset="0.055"/>
+
+        <xacro:battery/>
+        <xacro:switch/>
+
+        <xacro:wheel_assembly/>
+
+    </xacro:macro>
+
+</robot>
+
+
+<!-- there are only 2 types of inertials used here default and zero 
+ default is used in every link and zero in dummy links 
+ the default inertials use only ixx iyy and izz and mass for rough calculations. 
+ 
+ arduino driver motors IRs battery and switch serve no purpose. they are only there for visual effects
+
+ IR 1-4 are the front IRs of the linebot
+ IR l and r  are the IRs that detected the obstacles in line bot path
+
+ task mentions to join drive wheels to chassis but i connected drive wheels to motor so that if i move the motors, drive wheels will go with it
+
+ drive wheels consist of 2 cylinders iwheel (yellow) which actually moves and wheel (blacK) whihc is a tyre.
+ 
+ between caster_stud and caster_ball there are 2 dummy links to enable ball and socket type motion:
+    stud to link1: continuous joint in x dir, link1 to link2: cont joint in y dir and then link2 to ball: cont joint in z dir-->

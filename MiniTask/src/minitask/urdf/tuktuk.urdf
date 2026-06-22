@@ -61,7 +61,8 @@
         <child link="caster_stud" />
         <origin rpy="0 0 0" xyz="0 0 -0.065"/>
     </joint>
-
+    <link name="dummy_link1"></link>
+    <link name="dummy_link2"></link>
     <link name="caster_ball">
         <visual>
             <geometry>
@@ -70,10 +71,27 @@
             <material name="black" />
         </visual>
     </link>
-    <joint name="ball_n_socket" type="fixed">
+
+    <joint name="ball_n_socketx" type="continuous">
         <parent link="caster_stud" />
-        <child link="caster_ball" />
+        <child link="dummy_link1" />
         <origin rpy="0 0 0" xyz="0 0 -0.04"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    
+    <joint name="ball_n_sockety" type="continuous">
+        <parent link="dummy_link1" />
+        <child link="dummy_link2" />
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+    
+    
+    <joint name="ball_n_socketz" type="continuous">
+        <parent link="dummy_link2" />
+        <child link="caster_ball" />
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <axis xyz="0 0 1"/>
     </joint>
     
 
@@ -175,6 +193,34 @@
         <origin rpy="0 0 0" xyz="0.45 -0.25 0.08"/>
     </joint>
 
+    <link name="irl">
+        <visual>
+            <geometry>
+                <box size="0.1 0.1 0.1"/>
+            </geometry>
+            <material name="blue" />
+        </visual>
+    </link>
+    <joint name="irl_joint" type="fixed">
+        <parent link="chassis" />
+        <child link="irl" />
+        <origin rpy="0 0 0" xyz="0.3 0.25 0.08"/>
+    </joint>
+
+    <link name="irr">
+        <visual>
+            <geometry>
+                <box size="0.1 0.1 0.1"/>
+            </geometry>
+            <material name="blue" />
+        </visual>
+    </link>
+    <joint name="irr_joint" type="fixed">
+        <parent link="chassis" />
+        <child link="irr" />
+        <origin rpy="0 0 0" xyz="0.3 -0.25 0.08"/>
+    </joint>
+
     <link name="motor1">
         <visual>
             <geometry>
@@ -203,6 +249,36 @@
         <origin rpy="0 0 0" xyz="-0.3 0.225 -0.08"/>
     </joint>
 
+    <link name="iwheel1">
+        <visual>
+            <geometry>
+                <cylinder radius="0.05" length="0.1" />
+            </geometry>
+            <material name="yellow" />
+        </visual>
+    </link>
+    <joint name="iwheel1_joint" type="continuous">
+        <parent link="motor1" />
+        <child link="iwheel1" />
+        <origin rpy="1.57 0 0" xyz="0 -0.125 0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <link name="iwheel2">
+        <visual>
+            <geometry>
+                <cylinder radius="0.05" length="0.1" />
+            </geometry>
+            <material name="yellow" />
+        </visual>
+    </link>
+    <joint name="iwheel2_joint" type="continuous">
+        <parent link="motor2" />
+        <child link="iwheel2" />
+        <origin rpy="1.57 0 0" xyz="0 0.125 0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
     <link name="wheel1">
         <visual>
             <geometry>
@@ -212,9 +288,9 @@
         </visual>
     </link>
     <joint name="wheel1_joint" type="fixed">
-        <parent link="motor1" />
+        <parent link="iwheel1" />
         <child link="wheel1" />
-        <origin rpy="1.57 0 0" xyz="0 -0.125 0"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
     </joint>
 
     <link name="wheel2">
@@ -226,37 +302,9 @@
         </visual>
     </link>
     <joint name="wheel2_joint" type="fixed">
-        <parent link="motor2" />
+        <parent link="iwheel2" />
         <child link="wheel2" />
-        <origin rpy="1.57 0 0" xyz="0 0.125 0"/>
-    </joint>
-
-    <link name="iwheel1">
-        <visual>
-            <geometry>
-                <cylinder radius="0.05" length="0.1" />
-            </geometry>
-            <material name="yellow" />
-        </visual>
-    </link>
-    <joint name="iwheel1_joint" type="fixed">
-        <parent link="motor1" />
-        <child link="iwheel1" />
-        <origin rpy="1.57 0 0" xyz="0 -0.125 0"/>
-    </joint>
-
-    <link name="iwheel2">
-        <visual>
-            <geometry>
-                <cylinder radius="0.05" length="0.1" />
-            </geometry>
-            <material name="yellow" />
-        </visual>
-    </link>
-    <joint name="iwheel2_joint" type="fixed">
-        <parent link="motor2" />
-        <child link="iwheel2" />
-        <origin rpy="1.57 0 0" xyz="0 0.125 0"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
     </joint>
 
 
