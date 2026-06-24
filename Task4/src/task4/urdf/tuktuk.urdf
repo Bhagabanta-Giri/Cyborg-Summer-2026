@@ -38,7 +38,7 @@
     <inertial>
       <mass value="0.8"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <inertia ixx="0.0008" ixy="0" ixz="0" iyy="0.0008" iyz="0" izz="0.0008"/>
+      <inertia ixx="0.024239999999999998" ixy="0" ixz="0" iyy="0.06690666666666667" iyz="0" izz="0.09066666666666666"/>
     </inertial>
     <visual>
       <geometry>
@@ -56,7 +56,7 @@
     <inertial>
       <mass value="0.01"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <inertia ixx="1e-05" ixy="0" ixz="0" iyy="1e-05" iyz="0" izz="1e-05"/>
+      <inertia ixx="1.666666666666667e-05" ixy="0" ixz="0" iyy="1.666666666666667e-05" iyz="0" izz="1.666666666666667e-05"/>
     </inertial>
     <visual>
       <geometry>
@@ -79,7 +79,7 @@
     <inertial>
       <mass value="0.01"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <inertia ixx="1e-05" ixy="0" ixz="0" iyy="1e-05" iyz="0" izz="1e-05"/>
+      <inertia ixx="1.666666666666667e-05" ixy="0" ixz="0" iyy="1.666666666666667e-05" iyz="0" izz="1.666666666666667e-05"/>
     </inertial>
     <visual>
       <geometry>
@@ -102,7 +102,7 @@
     <inertial>
       <mass value="0.01"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <inertia ixx="1e-05" ixy="0" ixz="0" iyy="1e-05" iyz="0" izz="1e-05"/>
+      <inertia ixx="1.666666666666667e-05" ixy="0" ixz="0" iyy="1.666666666666667e-05" iyz="0" izz="1.666666666666667e-05"/>
     </inertial>
     <visual>
       <geometry>
@@ -125,7 +125,7 @@
     <inertial>
       <mass value="0.01"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <inertia ixx="1e-05" ixy="0" ixz="0" iyy="1e-05" iyz="0" izz="1e-05"/>
+      <inertia ixx="1.666666666666667e-05" ixy="0" ixz="0" iyy="1.666666666666667e-05" iyz="0" izz="1.666666666666667e-05"/>
     </inertial>
     <visual>
       <geometry>
@@ -148,7 +148,7 @@
     <inertial>
       <mass value="0.01"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <inertia ixx="1e-05" ixy="0" ixz="0" iyy="1e-05" iyz="0" izz="1e-05"/>
+      <inertia ixx="1.666666666666667e-05" ixy="0" ixz="0" iyy="1.666666666666667e-05" iyz="0" izz="1.666666666666667e-05"/>
     </inertial>
     <visual>
       <geometry>
@@ -171,7 +171,7 @@
     <inertial>
       <mass value="0.01"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <inertia ixx="1e-05" ixy="0" ixz="0" iyy="1e-05" iyz="0" izz="1e-05"/>
+      <inertia ixx="1.666666666666667e-05" ixy="0" ixz="0" iyy="1.666666666666667e-05" iyz="0" izz="1.666666666666667e-05"/>
     </inertial>
     <visual>
       <geometry>
@@ -194,7 +194,7 @@
     <inertial>
       <mass value="0.04"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <inertia ixx="4e-05" ixy="0" ixz="0" iyy="4e-05" iyz="0" izz="4e-05"/>
+      <inertia ixx="0.00030833333333333337" ixy="0" ixz="0" iyy="0.00030833333333333337" iyz="0" izz="0.0006"/>
     </inertial>
     <visual>
       <geometry>
@@ -217,7 +217,7 @@
     <inertial>
       <mass value="0.04"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <inertia ixx="4e-05" ixy="0" ixz="0" iyy="4e-05" iyz="0" izz="4e-05"/>
+      <inertia ixx="0.00030833333333333337" ixy="0" ixz="0" iyy="0.00030833333333333337" iyz="0" izz="0.0006"/>
     </inertial>
     <visual>
       <geometry>
@@ -240,7 +240,7 @@
     <inertial>
       <mass value="0.35"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <inertia ixx="0.00035" ixy="0" ixz="0" iyy="0.00035" iyz="0" izz="0.00035"/>
+      <inertia ixx="0.0049583333333333346" ixy="0" ixz="0" iyy="0.0014583333333333334" iyz="0" izz="0.005833333333333334"/>
     </inertial>
     <visual>
       <geometry>
@@ -263,7 +263,7 @@
     <inertial>
       <mass value="0.005"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <inertia ixx="5e-06" ixy="0" ixz="0" iyy="5e-06" iyz="0" izz="5e-06"/>
+      <inertia ixx="9.47916666666667e-07" ixy="0" ixz="0" iyy="9.47916666666667e-07" iyz="0" izz="1.5625e-06"/>
     </inertial>
     <visual>
       <geometry>
@@ -286,17 +286,17 @@
     <inertial>
       <mass value="0.03"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <inertia ixx="3e-05" ixy="0" ixz="0" iyy="3e-05" iyz="0" izz="3e-05"/>
+      <inertia ixx="5.424999999999999e-05" ixy="0" ixz="0" iyy="5.424999999999999e-05" iyz="0" izz="9.599999999999999e-05"/>
     </inertial>
     <visual>
       <geometry>
-        <box size="0.1 0.1 0.05"/>
+        <cylinder length="0.05" radius="0.08"/>
       </geometry>
       <material name="red"/>
     </visual>
     <collision>
       <geometry>
-        <box size="0.1 0.1 0.05"/>
+        <cylinder length="0.05" radius="0.08"/>
       </geometry>
     </collision>
   </link>
@@ -309,7 +309,7 @@
     <inertial>
       <mass value="0.01"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <inertia ixx="1e-05" ixy="0" ixz="0" iyy="1e-05" iyz="0" izz="1e-05"/>
+      <inertia ixx="6.895833333333335e-06" ixy="0" ixz="0" iyy="6.895833333333335e-06" iyz="0" izz="3.125e-06"/>
     </inertial>
     <visual>
       <geometry>
@@ -330,9 +330,9 @@
   </joint>
   <link name="dummy_link1">
     <inertial>
-      <mass value="0.01"/>
+      <mass value="0.001"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <inertia ixx="1e-05" ixy="0" ixz="0" iyy="1e-05" iyz="0" izz="1e-05"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
     </inertial>
     <collision>
       <geometry>
@@ -342,9 +342,9 @@
   </link>
   <link name="dummy_link2">
     <inertial>
-      <mass value="0.01"/>
+      <mass value="0.001"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <inertia ixx="1e-05" ixy="0" ixz="0" iyy="1e-05" iyz="0" izz="1e-05"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
     </inertial>
     <collision>
       <geometry>
@@ -356,7 +356,7 @@
     <inertial>
       <mass value="0.02"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <inertia ixx="2e-05" ixy="0" ixz="0" iyy="2e-05" iyz="0" izz="2e-05"/>
+      <inertia ixx="5e-06" ixy="0" ixz="0" iyy="5e-06" iyz="0" izz="5e-06"/>
     </inertial>
     <visual>
       <geometry>
@@ -392,7 +392,7 @@
     <inertial>
       <mass value="0.12"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+      <inertia ixx="0.000325" ixy="0" ixz="0" iyy="0.0002" iyz="0" izz="0.000325"/>
     </inertial>
     <visual>
       <geometry>
@@ -415,7 +415,7 @@
     <inertial>
       <mass value="0.03"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <inertia ixx="3e-05" ixy="0" ixz="0" iyy="3e-05" iyz="0" izz="3e-05"/>
+      <inertia ixx="4.3750000000000006e-05" ixy="0" ixz="0" iyy="4.3750000000000006e-05" iyz="0" izz="3.7500000000000003e-05"/>
     </inertial>
     <visual>
       <geometry>
@@ -439,7 +439,7 @@
     <inertial>
       <mass value="0.08"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <inertia ixx="8e-05" ixy="0" ixz="0" iyy="8e-05" iyz="0" izz="8e-05"/>
+      <inertia ixx="0.00026666666666666673" ixy="0" ixz="0" iyy="0.00026666666666666673" iyz="0" izz="0.0004"/>
     </inertial>
     <visual>
       <geometry>
@@ -462,7 +462,7 @@
     <inertial>
       <mass value="0.12"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <inertia ixx="0.00012" ixy="0" ixz="0" iyy="0.00012" iyz="0" izz="0.00012"/>
+      <inertia ixx="0.000325" ixy="0" ixz="0" iyy="0.0002" iyz="0" izz="0.000325"/>
     </inertial>
     <visual>
       <geometry>
@@ -485,7 +485,7 @@
     <inertial>
       <mass value="0.03"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <inertia ixx="3e-05" ixy="0" ixz="0" iyy="3e-05" iyz="0" izz="3e-05"/>
+      <inertia ixx="4.3750000000000006e-05" ixy="0" ixz="0" iyy="4.3750000000000006e-05" iyz="0" izz="3.7500000000000003e-05"/>
     </inertial>
     <visual>
       <geometry>
@@ -509,7 +509,7 @@
     <inertial>
       <mass value="0.08"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <inertia ixx="8e-05" ixy="0" ixz="0" iyy="8e-05" iyz="0" izz="8e-05"/>
+      <inertia ixx="0.00026666666666666673" ixy="0" ixz="0" iyy="0.00026666666666666673" iyz="0" izz="0.0004"/>
     </inertial>
     <visual>
       <geometry>
@@ -529,15 +529,15 @@
     <origin rpy="0 0 0" xyz="0 0 0"/>
   </joint>
 </robot>
-<!-- I used xacro to make this bot coz its easy to modify this way
-    most of the dimensions and origin of links are in properties.xacro
-    macros.xacro has all the macros used in main_assembly macro itself
-    materials.xacro has the colors(materials)
-    gazebo.xacro has the diff drive plugin used in task 4b
+<!-- I used xacro to make this bot coz its easy to modify this way.
+    Most of the dimensions and origin of links are in properties.xacro.
+    macros.xacro has all the macros used in main_assembly macro itself.
+    materials.xacro has the colors(materials).
+    gazebo.xacro has the diff drive plugin used in task 4b.
     
-    i used chassis instead of base_link 
-    the original tuktuk is in MiniTask 
-    more logic is inside macros.xacro 
+    I used chassis instead of base_link.
+    The original tuktuk is in MiniTask.
+    More logic is inside macros.xacro
     
-    KDL might throw a warning coz kdl does not support root link with inertia 
+    KDL might throw a warning coz kdl does not support root link with inertia,
     but i did not create a dummy link coz without inertial and collision, chassis will be invisible in gazebo-->

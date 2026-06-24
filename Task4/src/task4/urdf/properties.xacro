@@ -61,8 +61,8 @@
     <xacro:property name="ir_size" value="0.1"/>
 
     <!-- Caster -->
-    <xacro:property name="caster_base_size" value="0.1"/>
-    <xacro:property name="caster_base_h" value="0.05"/>
+    <xacro:property name="caster_base_r" value="0.08"/>
+    <xacro:property name="caster_base_w" value="0.05"/>
 
     <xacro:property name="caster_stud_r" value="0.025"/>
     <xacro:property name="caster_stud_h" value="0.08"/>
