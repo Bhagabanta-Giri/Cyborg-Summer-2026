@@ -19,8 +19,8 @@
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 from launch import LaunchDescription
-from launch.conditions import IfCondition, UnlessCondition
-from launch.actions import IncludeLaunchDescription ,DeclareLaunchArgument
+from launch.conditions import IfCondition
+from launch.actions import IncludeLaunchDescription ,DeclareLaunchArgument, ExecuteProcess, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import PathJoinSubstitution,LaunchConfiguration, PythonExpression
 import os
@@ -67,11 +67,15 @@ def generate_launch_description():
     run_ufo_arg = DeclareLaunchArgument(
         'ufo', default_value='false', description='Run the ufo feedback and visualization node'
     )
+    run_botpose_arg = DeclareLaunchArgument(
+        'botpose', default_value='false', description='Run the bot_pose_throttle and echo the throttled node'
+    )
 
     shape = LaunchConfiguration('shape')
     gtruth = LaunchConfiguration('gtruth')
     odom = LaunchConfiguration('odom')
     ufo = LaunchConfiguration('ufo')
+    botpose = LaunchConfiguration('botpose')
 
     square_node = Node(
         package='bot_control',
@@ -127,6 +131,37 @@ def generate_launch_description():
         name="odom_braodcaster",
         output="screen",
     )
+
+    bot_pose_throttle_node = Node(
+        package='topic_tools',
+        executable='throttle',
+        name='topic_throttler',
+        output='screen',
+        arguments=[
+            'messages', 
+            '/bot_pose', 
+            '0.4', 
+            '/bot_pose_throttled'
+        ],
+        condition=IfCondition(botpose)
+    )
+
+    bot_pose_echo = ExecuteProcess(
+        cmd=['ros2', 'topic', 'echo', '/bot_pose_throttled'],
+        output='screen',
+        condition=IfCondition(botpose)
+    )
+
+    delayed_throttler = TimerAction(
+    period=3.0,
+    actions=[bot_pose_throttle_node]
+    )
+
+    delayed_echo = TimerAction(
+    period=5.0,
+    actions=[bot_pose_echo]
+    )
+
     return LaunchDescription([
         world,
         spwan_bot,
@@ -135,6 +170,7 @@ def generate_launch_description():
         run_gtruth_arg,
         run_odom_arg,
         run_ufo_arg,
+        run_botpose_arg,
         odom_broadcaster,
         square_node,
         ellipse_node,
@@ -143,5 +179,7 @@ def generate_launch_description():
         gt_plotter_node,
         odom_plotter_node,
         ufo_feedback_node,
-        ufo_visualization_node
+        ufo_visualization_node,
+        delayed_throttler,
+        delayed_echo
         ])
